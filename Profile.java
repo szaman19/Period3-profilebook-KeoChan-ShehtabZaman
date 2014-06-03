@@ -11,6 +11,7 @@ public class Profile{
 	//public Arraylist<String> interests; 
 	
 	public Profile(){
+ 		//test for if profile already exists
  		ProfileMaker();
 	}
 
@@ -32,5 +33,7 @@ public class Profile{
        this.age = age; 
 	}
 
+	//add friendslist
+	//add the other comments - shehtab 
 
 }
