@@ -49,5 +49,25 @@ public class Profile{
 	return false;
     }
 
+    public boolean logIn(){
+
+	/*
+	System.out.println("Username:");
+	Scanner sc = new Scanner(System.in);
+	String un = sc.nextLine();
+	*/
+
+	System.out.println("Password:");
+	Scanner sc2 = new Scanner(System.in);
+	String pw = sc2.nextLine();
+	if(pw.equals(password)){
+	    System.out.println("Log in successful");
+	    return true;
+	}else{
+	    System.out.println("Log in failed.");
+	    return false;
+	}
+    }
+
 
 }
