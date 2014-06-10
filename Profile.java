@@ -3,16 +3,45 @@ import java.util.*;
 public class Profile{
 
     public ArrayList<Profile> friendslist; 
-    public String name; 
-    public int age; 
-    public String password; 
-    //public String status; 
+    protected String name; 
+    protected int age; 
+    protected String password; 
+    protected String status; 
     //public String birthday; 
     //public Arraylist<String> interests; 
     
     public Profile(){
 	ProfileMaker();
     }
+
+    public String getName(Profile p){
+	if(isFriends(p)){
+	    return name;
+	}else{
+	    return "Not available";
+	}
+    }
+
+    public int getAge(Profile p){
+	if(isFriends(p)){
+	    return age;
+	}else{
+	    return -1;
+	}
+    }
+
+    public void print(){
+	System.out.println("Name: "+name);
+	System.out.println("Age: "+age);
+	System.out.println(status);
+    }
+
+    public void setStatus(){
+	System.out.println("Type your status below.\n");
+	Scanner sc = new Scanner(System.in);
+	status = sc.nextLine();
+    }
+
     
     public void ProfileMaker(){ 
 	System.out.println("please enter your name");
