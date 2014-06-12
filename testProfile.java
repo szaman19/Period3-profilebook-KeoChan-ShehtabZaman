@@ -1,20 +1,23 @@
 import java.util.*;
 
-public class Profile{
+public class testProfile{
 
-	public ArrayList<Profile> friendslist; 
+	//public ArrayList<Profile> friendslist; 
 	public String name; 
 	public int age; 
 	public String password; 
-	public ArrayList<status> status; 
-	public String birthday; 
+	//public String status; 
+	//public String birthday; 
 	//public Arraylist<String> interests; 
 	
-	public Profile(){
+	public testProfile(String n, String p, int a){
  		//test for if profile already exists
- 		ProfileMaker();
+ 		//ProfileMaker();
+ 		name = n; 
+ 		password = p; 
+ 		age = a; 
 	}
-
+	
 	public void ProfileMaker(){ 
 		System.out.println("please enter your name");
 		Scanner entry = new Scanner(System.in);
@@ -28,15 +31,13 @@ public class Profile{
 		Scanner entry3 = new Scanner(System.in);
         String password = entry.nextLine();
 
-        System.out.println("When is your birthday?")
-        Scanner entry4 = new Scanner(System.in); 
-        String birthday = entry4.nextLine(); 
        this.name = name;
        this.password = password;  
        this.age = age; 
-       this.birthday = birthday; 
 	}
-
+public String toString(){
+	return (name + " " + age);
+}
 	//add friendslist
 	//add the other comments - shehtab 
 
