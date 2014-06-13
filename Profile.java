@@ -8,7 +8,8 @@ public class Profile{
     protected String name; 
     protected int age; 
     protected String password; 
-    protected String status; 
+    protected String status;
+    protected ArrayList<status> stats;  
     //public String birthday; 
     //public Arraylist<String> interests; 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -49,6 +50,9 @@ public class Profile{
 	System.out.println("Type your status below.\n");
 	Scanner sc = new Scanner(System.in);
 	status = sc.nextLine();
+    }
+    public String getStatus(){
+    	return status; 
     }
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////   
@@ -95,7 +99,7 @@ public class Profile{
 		else{
 			System.out.println("already connected"); 
 		}
-	}
+	}g
 
     public boolean isFriends(Profile friend){
 
