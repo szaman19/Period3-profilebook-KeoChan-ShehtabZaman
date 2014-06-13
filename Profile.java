@@ -8,7 +8,7 @@ public class Profile{
     protected String name; 
     protected int age; 
     protected String password; 
-    protected String status; 
+    protected sta sta; 
     //public String birthday; 
     //public Arraylist<String> interests; 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -109,6 +109,16 @@ public class Profile{
     		
     	}
     	return ans; 
+    }
+
+    public String getNewsfeed(){
+	String nf = "";
+	ArrayList<status> temp = new ArrayList<status>();
+	for(int i = 0; i < friendsList.size(); i++){
+	    temp.add(friendsList.get(i).getStatus());
+	}
+	//order statuses and add to nf
+	return nf;
     }
 
 
