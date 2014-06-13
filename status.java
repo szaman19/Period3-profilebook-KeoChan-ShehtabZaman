@@ -9,6 +9,14 @@ public class status{
     	time = cal.getInstance(); 
     	
 	}
+	public String showStatus(){
+		return st;
+	}
+	public String showTime(){
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		String ans = (sdf.format(time.getTime())); 
+		return ans; 
+	}
 	public String toString(){
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
     	//System.out.println( sdf.format(cal.getTime()) )

@@ -11,7 +11,7 @@ public class Profile{
     protected String status; 
     //public String birthday; 
     //public Arraylist<String> interests; 
-    
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
     public Profile(){
 	ProfileMaker();
     }
@@ -23,6 +23,12 @@ public class Profile{
 	    return "Not available";
 	}
     }
+    public String ownName(){
+    	return name; 
+    }
+    public int ownAge(){
+    	return age; 
+    }
 
     public int getAge(Profile p){
 	if(isFriends(p)){
@@ -31,7 +37,8 @@ public class Profile{
 	    return -1;
 
     }
-
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void print(){
 	System.out.println("Name: "+name);
 	System.out.println("Age: "+age);
@@ -44,17 +51,18 @@ public class Profile{
 	status = sc.nextLine();
     }
 
-    
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////   
     public void ProfileMaker(){ 
-	System.out.println("please enter your name");
+    System.out.println("Hi! Welcome to match, connect with your friends and see how well you match up. ");
+	System.out.println("Please enter your name");
 	Scanner entry = new Scanner(System.in);
 	String name = entry.nextLine(); 
 	
-	System.out.println("please enter your age");
+	System.out.println("Please enter your age");
 	Scanner entry2 = new Scanner(System.in);
 	int age = entry2.nextInt();
 	
-        System.out.println("please enter your password");
+        System.out.println("Please enter your password");
 	Scanner entry3 = new Scanner(System.in);
 	String password = entry.nextLine();
 	
@@ -62,24 +70,62 @@ public class Profile{
 	this.password = password;  
 	this.age = age; 
     }
-
-    public boolean equals(Profile other){
-	if(!(other instanceof Profile)){
-	    return false;
-	}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public boolean equals(Profile other, Profile other2){
+	if(other.ownName() == other2.ownName())
+		{
+			if (other.ownAge() == other2.ownAge()) {
+				return true; 
+			}
+		}
+	    	return false; 
+		}
+	  //  }
 	//may not work
-	return true;
-    }
+	    //what is this supposed to do? - Shehtab
+	//return true;
+    //}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+	public void addFriend(Profile friend ){
+		if(!(isFriends(friend))){
+			friendslist.add(friend); 
+		}
+		else{
+			System.out.println("already connected"); 
+		}
+	}
 
     public boolean isFriends(Profile friend){
+
+    	boolean ans = false; 
+    	int counter = 0; 
+    	while(ans && counter < friendslist.size()){
+    		if(equals(friend, friendslist.get(counter))){
+    			ans = true; 
+    			counter ++; 
+    		}
+    		
+    	}
+    	return ans; 
+    }
+
+
+/*
+
+
+
+
 	for(int i = 0; i < friendslist.size(); i++){
-	    if(equals(friend)){
+	    if(equals(friend, friendslist.get(i))){
 		return true;
 	    }
 	}
 	return false;
     }
-
+    */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public boolean logIn(){
 
 	System.out.println("Password:");
