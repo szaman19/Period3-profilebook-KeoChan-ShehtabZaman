@@ -1,8 +1,8 @@
 public class StringValue{
 	int x ; 
-	String y; 
+	Profile y ; 
 
-	public StringValue(int nums, int strs){
+	public StringValue(int nums, Profile strs){
 		x = nums; 
 		y = strs; 
 	}  

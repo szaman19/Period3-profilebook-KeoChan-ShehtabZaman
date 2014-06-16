@@ -4,7 +4,7 @@ public class Profile{
 
 
 
-    public ArrayList<Profile> friendslist; 
+    public ArrayList<Profile> friendsList; 
     protected String name; 
     protected int age; 
     protected String password;
@@ -13,7 +13,7 @@ public class Profile{
     protected String status;
     protected ArrayList<status> stats;  
 =======
-    protected sta sta; 
+    //protected sta sta; 
 >>>>>>> 1c6c96eef026408c28c1bda504c32043da0fd20d
     //public String birthday; 
     //public Arraylist<String> interests; 
@@ -59,6 +59,9 @@ public class Profile{
     public String getStatus(){
     	return status; 
     }
+    public ArrayList<Profile> getFriendsList(){
+    	return friendsList
+    }
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////   
     public void ProfileMaker(){ 
@@ -99,7 +102,7 @@ public class Profile{
     
 	public void addFriend(Profile friend ){
 		if(!(isFriends(friend))){
-			friendslist.add(friend); 
+			friendsList.add(friend); 
 		}
 		else{
 			System.out.println("already connected"); 
@@ -110,8 +113,8 @@ public class Profile{
 
     	boolean ans = false; 
     	int counter = 0; 
-    	while(ans && counter < friendslist.size()){
-    		if(equals(friend, friendslist.get(counter))){
+    	while(ans && counter < friendsList.size()){
+    		if(equals(friend, friendsList.get(counter))){
     			ans = true; 
     			counter ++; 
     		}
