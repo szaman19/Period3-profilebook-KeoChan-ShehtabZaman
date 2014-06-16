@@ -7,13 +7,14 @@ public class Profile{
     public ArrayList<Profile> friendslist; 
     protected String name; 
     protected int age; 
-    protected String password; 
-
+    protected String password;
+    protected ArrayList<String> interests = new ArrayList<String>();
+<<<<<<< HEAD
     protected String status;
     protected ArrayList<status> stats;  
-
+=======
     protected sta sta; 
-
+>>>>>>> 1c6c96eef026408c28c1bda504c32043da0fd20d
     //public String birthday; 
     //public Arraylist<String> interests; 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -118,9 +119,6 @@ public class Profile{
     	}
     	return ans; 
     }
-    //LOOK AT THIS KEO
-    //going to add algorithm to order friends 
-    //and then get the statuses from taht 
 
     public String getNewsfeed(){
 	String nf = "";
@@ -130,6 +128,21 @@ public class Profile{
 	}
 	//order statuses and add to nf
 	return nf;
+    }
+
+
+
+    public void setInterests(){
+    	scanner sc = new Scanner(System.in);
+    	String temp = sc.nextLine();
+
+    	interests.add(temp);
+    }
+
+    public void printInterests(){
+    	for(int i = 0; i < interests.size(); i++){
+    		System.out.println(interests.get(i));
+    	}
     }
 
 
