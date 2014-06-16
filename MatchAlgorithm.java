@@ -1,4 +1,6 @@
 //match algorithm 
+import java.util.*; 
+import java.text.*;
 public class MatchAlgorithm{
 	public ArrayList<Profile> friends;
 	//public Profile self;  
@@ -35,14 +37,14 @@ public class MatchAlgorithm{
 		//for (int i = 0; i < interests.size(); i ++ ) {
 		//	temp = interests.get(i); 
 
-
+				int nums = 0;
 				for (int b = 0; b < friends.size(); b++) { //get all the friends in the friendslist
 					
 					Profile tempP = friends.get(b); // take a friend
-					int nums = 0;
+				
 
-						for (int x = 0; x < temp.getFriendsList().size(); x++) { //look at the friends friends list 
-							Profile tempP2 = temp.getFriendsList().get(x); //take a friend 
+						for (int x = 0; x < tempP.getFriendsList().size(); x++) { //look at the friends friends list 
+							Profile tempP2 = tempP.getFriendsList().get(x); //take a friend 
 								
 								for (int g = 0; g < friends.size() ; g ++ ) {//get all friends
 									
@@ -53,7 +55,8 @@ public class MatchAlgorithm{
 
 						
 						}
-
+						StringValue tempV = new StringValue(nums, tempP); 
+						commons.add(tempV); 
 				}
 
 

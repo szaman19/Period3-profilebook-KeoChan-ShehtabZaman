@@ -9,12 +9,12 @@ public class Profile{
     protected int age; 
     protected String password;
     protected ArrayList<String> interests = new ArrayList<String>();
-<<<<<<< HEAD
+//<<<<<<< HEAD
     protected String status;
     protected ArrayList<status> stats;  
-=======
+//=======
     //protected sta sta; 
->>>>>>> 1c6c96eef026408c28c1bda504c32043da0fd20d
+//>>>>>>> 1c6c96eef026408c28c1bda504c32043da0fd20d
     //public String birthday; 
     //public Arraylist<String> interests; 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -56,11 +56,11 @@ public class Profile{
 	Scanner sc = new Scanner(System.in);
 	status = sc.nextLine();
     }
-    public String getStatus(){
-    	return status; 
+    public status getStatus(){
+    	return stats.get(0); 
     }
     public ArrayList<Profile> getFriendsList(){
-    	return friendsList
+    	return friendsList;
     }
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////   
@@ -107,7 +107,7 @@ public class Profile{
 		else{
 			System.out.println("already connected"); 
 		}
-	}g
+	}
 
     public boolean isFriends(Profile friend){
 
@@ -136,7 +136,7 @@ public class Profile{
 
 
     public void setInterests(){
-    	scanner sc = new Scanner(System.in);
+    	Scanner sc = new Scanner(System.in);
     	String temp = sc.nextLine();
 
     	interests.add(temp);
