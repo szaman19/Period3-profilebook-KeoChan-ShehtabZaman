@@ -125,6 +125,12 @@ public class Profile{
 
     public String getNewsfeed(){
 	String nf = "";
+
+	MatchAlgorithm x = new MatchAlgorithm(friendsList, interests);
+	x.match(); 
+	x.order(); 
+	friendsList = x.orderedFriends();  
+
 	ArrayList<status> temp = new ArrayList<status>();
 	for(int i = 0; i < friendsList.size(); i++){
 	    temp.add(friendsList.get(i).getStatus());

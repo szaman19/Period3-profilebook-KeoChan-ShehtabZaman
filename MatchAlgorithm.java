@@ -56,7 +56,7 @@ public class MatchAlgorithm{
 						
 						}
 						StringValue tempV = new StringValue(nums, tempP); 
-						commons.add(tempV); 
+						
 				}
 
 
@@ -64,8 +64,21 @@ public class MatchAlgorithm{
 		//}
 
 	}
+	public void order(){
+		ArrayList<StringValue> temp = new ArrayList<StringValue>();
+		for (int i = 0; i < commons.size() ; i++) {
+			temp.add(commons.get(commons.size() - i - 1));
+		}
+		commons = temp;
+	}
 
-	//public 
+	public ArrayList<Profile> orderedFriends(){
+		for (int i = 0; i < commons.size(); i++ ) {
+			friends.remove(i); 
+			friends.set(i, commons.get(i).getProfile());
+		}
+		return friends; 
+	}
 
 
 }
