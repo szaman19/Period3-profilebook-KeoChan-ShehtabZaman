@@ -11,12 +11,10 @@ public class Profile{
     protected ArrayList<String> interests = new ArrayList<String>();
 //<<<<<<< HEAD
     protected String status;
-    protected ArrayList<status> stats;  
-//=======
-    //protected sta sta; 
-//>>>>>>> 1c6c96eef026408c28c1bda504c32043da0fd20d
+    protected ArrayList<status> stats;   
+
     //public String birthday; 
-    //public Arraylist<String> interests; 
+    public ArrayList<String> interests; 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
     public Profile(){
 	ProfileMaker();
@@ -183,6 +181,17 @@ public class Profile{
 
 	}
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //																								  	   	 //
+    //																										//
+    //KEO WE HAVE TO WRITE THE PROFILES INTO A TEXT FILE 											       //
+    //We write the info into the files then take them out again each time we call a command 			  //														  //
+    //																								     //
+    //																								    //
+    //																								   //
+    //																								  //
+    //																								 //
+    //////////////////////////////////////////////////////////////////////////////////////////////////
 
 	//add friendslist
 	//add the other comments - shehtab 
