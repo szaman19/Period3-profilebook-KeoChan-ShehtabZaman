@@ -210,11 +210,12 @@ public class Profile{
     	}
     	data.add(temp);
     	data.add("Status: "+status);
-
+    	PrintWriter writer = new PrintWriter("profile.txt", "UTF-8");
+    	
     	for(int i = 0; i < data.size(); i++){
     		//take data.get(i) and write into a new line of text file
     		try{ 
-          PrintWriter writer = new PrintWriter("profile.txt", "UTF-8");
+          
           writer.println(data.get(i));
           writer.close();
         }
