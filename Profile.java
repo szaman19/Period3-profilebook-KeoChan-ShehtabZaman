@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class Profile{
 
@@ -181,7 +182,7 @@ public class Profile{
 	}
     }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
     /*
     public void fileWriter(){
     	this writes all the info in the profile i.e friends list, interest, name ,password on a text file. 
@@ -196,25 +197,34 @@ public class Profile{
 
 
 
-=======
+//=======
 
     public void toText(){
-    	ArrayList<String> data = new ArrayList<String<>();
+    	ArrayList<String> data = new ArrayList<String>();
     	data.add("Name: "+name);
     	data.add("Age: "+age);
     	data.add("Password: "+password);
     	String temp = "Interests:";
     	for(int i = 0; i < interests.size(); i++){
-    		temp += " "+interets.get(i);
+    		temp += " "+ interests.get(i);
     	}
     	data.add(temp);
     	data.add("Status: "+status);
 
     	for(int i = 0; i < data.size(); i++){
     		//take data.get(i) and write into a new line of text file
+    		try{ 
+          PrintWriter writer = new PrintWriter("profile.txt", "UTF-8");
+          writer.println("encrypted = " + data.get(i));
+          writer.close();
+        }
+        catch(IOException e){
+          e.printStackTrace();
     	}
     }
->>>>>>> 21eb76a2f3e73540eac8920b00390096a9a16554
+
+}
+//>>>>>>> 21eb76a2f3e73540eac8920b00390096a9a16554
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //																								  	   	 //
     //																										//
