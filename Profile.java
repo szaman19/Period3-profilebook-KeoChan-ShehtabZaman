@@ -181,6 +181,24 @@ public class Profile{
 
 	}
     }
+
+
+    public void toText(){
+    	ArrayList<String> data = new ArrayList<String<>();
+    	data.add("Name: "+name);
+    	data.add("Age: "+age);
+    	data.add("Password: "+password);
+    	String temp = "Interests:";
+    	for(int i = 0; i < interests.size(); i++){
+    		temp += " "+interets.get(i);
+    	}
+    	data.add(temp);
+    	data.add("Status: "+status);
+
+    	for(int i = 0; i < data.size(); i++){
+    		//take data.get(i) and write into a new line of text file
+    	}
+    }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //																								  	   	 //
     //																										//
