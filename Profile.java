@@ -215,7 +215,7 @@ public class Profile{
     		//take data.get(i) and write into a new line of text file
     		try{ 
           PrintWriter writer = new PrintWriter("profile.txt", "UTF-8");
-          writer.println("encrypted = " + data.get(i));
+          writer.println(data.get(i));
           writer.close();
         }
         catch(IOException e){
