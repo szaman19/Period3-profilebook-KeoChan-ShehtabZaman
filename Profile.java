@@ -13,8 +13,7 @@ public class Profile{
     protected String status;
     protected ArrayList<status> stats;   
 
-    //public String birthday; 
-    public ArrayList<String> interests; 
+    //public String birthday;  
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////  
     public Profile(){
 	ProfileMaker();
@@ -167,7 +166,7 @@ public class Profile{
     }
     */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public boolean logIn(){
+    public boolean logIn(){ //log in has to be changed so it equals password to a password saved on a text file; 
 
 	System.out.println("Password:");
 	Scanner sc2 = new Scanner(System.in);
@@ -181,6 +180,21 @@ public class Profile{
 
 	}
     }
+
+    /*
+    public void fileWriter(){
+    	this writes all the info in the profile i.e friends list, interest, name ,password on a text file. 
+
+    }
+
+    public profile getData(){
+		this takes the info from the text file and creates a profile out of it. we can use that to do login and what not. 
+		This can go into newsfeed actually. 
+    }
+    */ 
+
+
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //																								  	   	 //
     //																										//
